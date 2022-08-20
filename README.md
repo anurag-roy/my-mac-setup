@@ -35,7 +35,7 @@ sudo xcode-select --install
 
 ## Homebrew
 
-```
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
@@ -58,12 +58,18 @@ brew install --cask iterm2
 
 ## zsh Setup
 
-```
+```sh
 # Install zsh
 brew install zsh
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install forked spaceship theme
+git clone https://github.com/anurag-roy/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# Paste .zshrc file
 
 ```
 
@@ -74,7 +80,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 - [Numi](https://numi.app/) `brew install --cask numi`
 - [Numi Alfred Integration](https://github.com/nikolaeu/numi/wiki/Alfred-Integration)
 - [Discord](https://discord.com/) `brew install --cask discord`
-
 - [Skype](https://www.skype.com/en/get-skype/) `brew install --cask skype`
 - [IINA](https://iina.io/) `brew install --cask iina`
 - [Sideloadly!](https://sideloadly.io/#download)
