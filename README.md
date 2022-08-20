@@ -95,23 +95,19 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 - [Chrome](https://www.google.com/intl/en_in/chrome/), [Chrome Canary](https://www.google.com/intl/en_in/chrome/canary/)
 - [VS Code Insiders](https://code.visualstudio.com/insiders/)
+
+  Settings > Select "Turn on Settings Sync" > Sign in
+
+  And everything should be good to go. In case anything goes wrong, use json/script from vscode folder.
+
 - [Safari TP](https://developer.apple.com/safari/technology-preview/)
 - [Insomnia](https://insomnia.rest/) `brew install --cask insomnia`
 
 # Paid Apps
 
-- Alfred + Powerpack
+- Alfred Powerpack
 - Bartender
 - Sensei
 - iStats Menu Bar
 - Downie 4
 - Fantastical
-
-# Maybe
-
-- Codye
-- Fig
-- TablePlus
-- Monodraw
-- HazeOver
-- Newton
