@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/anurag/.oh-my-zsh"
+export ZSH="/Users/anuragroy/.oh-my-zsh"
 
 # Path to brew installed Git instead of Apple-Git
 export PATH="/usr/local/git/bin:$PATH"
@@ -38,8 +38,7 @@ SPACESHIP_GIT_STATUS_COLOR="magenta"
 plugins=(macos)
 
 source $ZSH/oh-my-zsh.sh
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Git remove all local feature branches
 alias gitClean="git branch | grep -v "master" | xargs git branch -D && git remote prune origin"
@@ -58,8 +57,8 @@ export BAT_THEME="ansi"
 alias ls="exa"
 alias cat="bat"
 
-alias c="code"
-alias ci="code-insiders"
+alias c="code ."
+alias ci="code-insiders ."
 
 alias pi="pnpm install"
 alias pd="pnpm dev"
@@ -68,6 +67,3 @@ alias ps="pnpm serve"
 
 #Fortune, Cowsay
 fortune | cowsay -f tux
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-

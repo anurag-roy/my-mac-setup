@@ -8,6 +8,13 @@
 # Enable repeating keys by pressing and holding down keys
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+```
+
+### Finder Changes
+
+```sh
 # Sort folders first in Finder
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
@@ -16,6 +23,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Quit finder using cmd-q
+defaults write com.apple.finder QuitMenuItem -bool true
 
 # Restart Finder for changes to take effect
 killall Finder
@@ -69,8 +79,68 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/anurag-roy/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
+# Install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install some CLI programs
+brew install bat exa cowsay fortune
+
+# Setup "Developer Excuses" for fortune
+cd /usr/local/Cellar/fortune/9708/share/games/fortunes
+rm -rf *
+strfile excuses
+
 # Paste .zshrc file
 
+```
+
+## Git Setup
+
+Setup GCM
+
+```sh
+git config --global credential.helper osxkeychain
+brew tap microsoft/git
+brew install --cask git-credential-manager-core
+```
+
+Setup GPG Key for commits
+
+```sh
+brew install gnupg
+gpg --import private.key
+gpg --list-secret-keys --keyid-format=long
+git config --global user.signingkey D58EE2143BC62EEA
+git config --global commit.gpgsign true
+```
+
+Setup Global .gitignore
+
+```sh
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+```
+
+Update Global Config
+
+```sh
+git config --global user.name "Anurag Roy"
+git config --global user.email "anuragroy@duck.com"
+```
+
+## QuickLook Plugins
+
+```sh
+brew install --cask \
+    qlcolorcode \
+    qlstephen \
+    qlmarkdown \
+    quicklook-json \
+    qlprettypatch \
+    quicklook-csv \
+    betterzip \
+    webpquicklook \
+    suspicious-package
 ```
 
 ## Free Apps
@@ -86,10 +156,11 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 - [Rectangle](https://rectangleapp.com/) `brew install --cask rectangle`
 - [AltTab](https://alt-tab-macos.netlify.app/) `brew install --cask alt-tab`
 - [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
-- [ImageOptim](https://imageoptim.com/mac) `brew install --cask imageoptim`
+- [ImageOptim](https://imageoptim.com/mac) `brew install --cask image-optim`
 - [Windscribe](https://windscribe.com/) `brew install --cask windscribe`
 - [Transmission](https://transmissionbt.com/download/) `brew install --cask transmission`
 - [TextMate](https://macromates.com/) `brew install --cask textmate`
+- [Shottr](https://shottr.cc/)
 
 ## Dev Tools
 
@@ -102,6 +173,13 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 - [Safari TP](https://developer.apple.com/safari/technology-preview/)
 - [Insomnia](https://insomnia.rest/) `brew install --cask insomnia`
+
+## Fonts
+
+```sh
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono font-inter
+```
 
 # Paid Apps
 
