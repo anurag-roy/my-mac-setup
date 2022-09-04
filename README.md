@@ -17,9 +17,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Show hidden files and folders in Finder
-defaults write com.apple.Finder AppleShowAllFiles true
-
 # Restart Finder for changes to take effect
 killall Finder
 ```
