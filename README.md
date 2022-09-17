@@ -181,6 +181,8 @@ brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono font-inter
 ```
 
+Download and install SF Fonts from [Apple Developer](https://developer.apple.com/fonts/)
+
 # Paid Apps
 
 - Alfred Powerpack
