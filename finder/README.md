@@ -1,0 +1,5 @@
+![preview final look](https://raw.githubusercontent.com/anurag-roy/my-mac-setup/main/finder/final-look.webp)
+![preview general](https://raw.githubusercontent.com/anurag-roy/my-mac-setup/main/finder/general.webp)
+![preview tags](https://raw.githubusercontent.com/anurag-roy/my-mac-setup/main/finder/tags.webp)
+![preview sidebar](https://raw.githubusercontent.com/anurag-roy/my-mac-setup/main/finder/sidebar.webp)
+![preview advanced](https://raw.githubusercontent.com/anurag-roy/my-mac-setup/main/finder/advanced.webp)
