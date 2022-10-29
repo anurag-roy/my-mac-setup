@@ -83,7 +83,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Install some CLI programs
-brew install bat exa cowsay fortune
+brew install bat exa jq neofetch cowsay fortune nvim
 
 # Setup "Developer Excuses" for fortune
 cd /usr/local/Cellar/fortune/9708/share/games/fortunes
@@ -173,6 +173,10 @@ brew install --cask \
 
 - [Safari TP](https://developer.apple.com/safari/technology-preview/)
 - [Insomnia](https://insomnia.rest/) `brew install --cask insomnia`
+
+```sh
+pnpm add -g rimraf typescript tsx http-server @funboxteam/optimizt
+```
 
 ## Fonts
 
