@@ -1,3 +1,6 @@
+import:
+  - ~/.config/alacritty/dracula.yml
+
 env:
   TERM: xterm-256color
 
@@ -25,28 +28,7 @@ font:
     style: SemiBold Italic
   size: 12
 
-colors:
-  primary:
-   background: '#282935'
-   foreground: '#f9f9f5'
-  normal:
-   black:   '#000000'
-   red:     '#ef766d'
-   green:   '#88f397'
-   yellow:  '#f4f8a7'
-   blue:    '#c4a9f4'
-   magenta: '#f297cd'
-   cyan:    '#aceafb'
-   white:   '#c7c7c7'
-  bright:
-   black:   '#676767'
-   red:     '#ef766d'
-   green:   '#88f397'
-   yellow:  '#f4f8a7'
-   blue:    '#c4a9f4'
-   magenta: '#f297cd'
-   cyan:    '#aceafb'
-   white:   '#ffffff'
-
+draw_bold_text_with_bright_colors: false
+  
 key_bindings:
   - { key: T,              mods: Command,                    action: CreateNewWindow      }
