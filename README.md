@@ -78,6 +78,7 @@ brew install --cask alacritty
 1. Copy [alacritty](alacritty/) folder to `~/.config/alacritty`
 2. Set alacritty icon using [these instructions](https://www.youtube.com/watch?v=Y95U--xd5NM)
 </details>
+
 ---
 
 ## zsh Setup
