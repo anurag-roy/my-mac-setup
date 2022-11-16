@@ -66,6 +66,20 @@ brew install --cask iterm2
 
 ---
 
+## Alacritty
+
+```
+brew install --cask alacritty
+```
+
+<details>
+    <summary>Customisation</summary>
+
+1. Copy [alacritty](alacritty/) folder to `~/.config/alacritty`
+2. Set alacritty icon using [these instructions](https://www.youtube.com/watch?v=Y95U--xd5NM)
+</details>
+---
+
 ## zsh Setup
 
 ```sh
@@ -85,7 +99,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install some CLI programs
-brew install bat exa jq neofetch cowsay fortune nvim micro
+brew install tmux bat exa jq neofetch cowsay fortune nvim
 
 # Setup "Developer Excuses" for fortune
 cd /usr/local/Cellar/fortune/9708/share/games/fortunes
@@ -93,6 +107,8 @@ rm -rf *
 strfile excuses
 
 # Paste .zshrc file
+
+# Copy .tmux.conf to ~
 
 ```
 
