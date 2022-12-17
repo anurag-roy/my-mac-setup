@@ -1,3 +1,9 @@
+# Attach to tmux session "default" or start it
+if [ -z "$TMUX" ]
+then
+    tmux attach -t default || tmux new -s default
+fi
+
 #Fortune, Cowsay
 fortune | cowsay -f tux
 
@@ -16,9 +22,13 @@ export ZSH="/Users/anuragroy/.oh-my-zsh"
 # Path to brew installed Git instead of Apple-Git
 export PATH="/usr/local/git/bin:$PATH"
 
+export PATH="/Users/anuragroy/.local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/Users/anuragroy/Library/pnpm:$PATH"
+export PNPM_HOME="/Users/anuragroy/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 export PATH="/Users/anuragroy/.deno/bin:$PATH"
+
+export PATH="/Users/anuragroy/Library/Python/3.9/bin:$PATH"
 
 export BAT_THEME="ansi"
 
@@ -31,9 +41,13 @@ source $ZSH/oh-my-zsh.sh
 # uninstall by removing these lines
 #[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
+alias brewup="brew update && brew upgrade"
+
 # CLI aliases
 alias ls="exa"
+alias tree="exa --tree"
 alias cat="bat"
+alias lg="lazygit"
 
 # Development aliases
 alias c="code ."
@@ -47,4 +61,4 @@ alias ps="pnpm serve"
 
 #Git aliases
 alias gitclean='git branch | grep -v "master" | xargs git branch -D && git remote prune origin'
-alias gitlog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gitlog='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'

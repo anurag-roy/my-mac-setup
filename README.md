@@ -100,7 +100,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install some CLI programs
-brew install tmux bat exa jq neofetch cowsay fortune nvim
+brew install \
+	tmux \
+	bat \
+	exa \
+	jq \
+	cowsay \
+	fortune \
+	nvim \
+	lazygit
 
 # Setup "Developer Excuses" for fortune
 cd /usr/local/Cellar/fortune/9708/share/games/fortunes
@@ -145,6 +153,13 @@ Update Global Config
 ```sh
 git config --global user.name "Anurag Roy"
 git config --global user.email "anuragroy@duck.com"
+```
+
+Install and setup GitHub CLI
+```
+brew install gh
+gh auth login
+gh extension install yusukebe/gh-markdown-preview
 ```
 
 ## QuickLook Plugins
