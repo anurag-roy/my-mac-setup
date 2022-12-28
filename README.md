@@ -209,7 +209,7 @@ brew install --cask \
 - [Insomnia](https://insomnia.rest/) `brew install --cask insomnia`
 
 ```sh
-pnpm add -g rimraf typescript tsx http-server @funboxteam/optimizt
+pnpm add -g rimraf typescript tsx serve kill-port @funboxteam/optimizt
 ```
 
 ## Fonts
