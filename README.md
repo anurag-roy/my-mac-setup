@@ -126,7 +126,6 @@ strfile excuses
 Setup GCM
 
 ```sh
-git config --global credential.helper osxkeychain
 brew tap microsoft/git
 brew install --cask git-credential-manager-core
 ```
