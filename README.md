@@ -104,6 +104,7 @@ brew install \
 	tmux \
 	bat \
 	exa \
+	hyperfine \
 	jq \
 	cowsay \
 	fortune \
