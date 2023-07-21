@@ -109,7 +109,8 @@ brew install \
 	cowsay \
 	fortune \
 	nvim \
-	lazygit
+	lazygit \
+    zoxide
 
 # Setup "Developer Excuses" for fortune
 cd /usr/local/Cellar/fortune/9708/share/games/fortunes
@@ -156,6 +157,7 @@ git config --global user.email "anuragroy@duck.com"
 ```
 
 Install and setup GitHub CLI
+
 ```
 brew install gh
 gh auth login

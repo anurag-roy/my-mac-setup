@@ -48,6 +48,7 @@ alias ls="exa"
 alias tree="exa --tree"
 alias cat="bat"
 alias lg="lazygit"
+alias z="zoxide"
 
 # Development aliases
 alias c="code ."
