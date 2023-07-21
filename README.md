@@ -110,7 +110,8 @@ brew install \
 	fortune \
 	nvim \
 	lazygit \
-    zoxide
+    zoxide \
+    cloudflared
 
 # Setup "Developer Excuses" for fortune
 cd /usr/local/Cellar/fortune/9708/share/games/fortunes

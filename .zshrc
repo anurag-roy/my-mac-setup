@@ -63,3 +63,8 @@ alias ps="pnpm serve"
 #Git aliases
 alias gitclean='git branch | grep -v "master" | xargs git branch -D && git remote prune origin'
 alias gitlog='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+
+# `tunnel 8000` will tunnel https://local.anuragroy.dev to http://localhost:8000
+tunnel() {
+  cloudflared tunnel run --url http://localhost:$1 local
+}
